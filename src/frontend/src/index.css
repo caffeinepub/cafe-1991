@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    /* Cafe 1991 warm palette */
+    --background: 0.953 0.018 75;
+    --foreground: 0.255 0.042 48;
+    --card: 0.983 0.012 80;
+    --card-foreground: 0.255 0.042 48;
+    --popover: 0.983 0.012 80;
+    --popover-foreground: 0.255 0.042 48;
+    --primary: 0.657 0.1 54;
+    --primary-foreground: 0.983 0.008 80;
+    --secondary: 0.885 0.032 70;
+    --secondary-foreground: 0.255 0.042 48;
+    --muted: 0.898 0.022 72;
+    --muted-foreground: 0.435 0.042 50;
+    --accent: 0.885 0.032 70;
+    --accent-foreground: 0.255 0.042 48;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.898 0.022 72;
+    --input: 0.898 0.022 72;
+    --ring: 0.657 0.1 54;
+    --chart-1: 0.657 0.1 54;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.475 0.082 52;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    /* Custom café tokens */
+    --cafe-cream: 0.953 0.018 75;
+    --cafe-beige: 0.885 0.032 70;
+    --cafe-caramel: 0.657 0.1 54;
+    --cafe-brown: 0.255 0.042 48;
+    --cafe-brown-mid: 0.435 0.042 50;
+    --cafe-footer: 0.475 0.082 52;
+    --cafe-footer-text: 0.938 0.025 74;
+    --sidebar: 0.885 0.032 70;
+    --sidebar-foreground: 0.255 0.042 48;
+    --sidebar-primary: 0.657 0.1 54;
+    --sidebar-primary-foreground: 0.983 0.008 80;
+    --sidebar-accent: 0.953 0.018 75;
+    --sidebar-accent-foreground: 0.255 0.042 48;
+    --sidebar-border: 0.898 0.022 72;
+    --sidebar-ring: 0.657 0.1 54;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  .cafe-script {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+  }
+  .cafe-heading {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+  }
+  .card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px -8px oklch(0.255 0.042 48 / 0.18);
+  }
+}
